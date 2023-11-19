@@ -1,0 +1,28 @@
+# 2 phase locking
+
+## 단어 정의
+Schedule: 여러 트랜잭션이 동시에 실행될 때 각 트랜잭션 내 연산들이 배치 되는 순서
+
+Serial schedule: 트랜잭션들이 겹치치 않고 한번에 실행되는 스케줄
+
+Serializability: 여러 트랜잭션들이 동시에 실행될 때 그 결과가 마치 트랜잭션이 순차적으로 실행되는 것과 같은 특징
+
+
+## 2PL이란?
+![Alt text](img/2PL.png)
+- 트랜잭션의 Serializability를 보장하기 위한 락킹 기법
+- 트랜잭션을 크게 두 단계로 나눔
+    1. Growing phase: 락을 획득하는 구간(락을 해제할 수 없음)
+    2. Shrinking phase: 락을 해제하는 구간(락을 획득할 수 없음)
+- 두 종류의 락을 고려
+    1. shared lock, known as read lock
+    2. exclusive lock, known as write lock
+
+## Without 2PL
+
+## With 2PL
+
+## Warning
+
+## Question
+1. 2PL은 결국 Serial Schedule의 결과 아닌가?
